@@ -1,0 +1,59 @@
+/* Aplicação do estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo da página */
+body {
+    background-image: url('fundinho.png');
+    background-repeat: no-repeat;
+    background-position: absolute; /* Centraliza o fundo */
+    font-family: Arial, sans-serif;
+    color: rgb(86, 77, 128);
+    text-align: center;
+}
+
+/* Estilo do título */
+h1 {
+    margin-top: 20px;
+    font-size: 3rem;
+    color: #fff;
+}
+
+/* Parágrafo */
+p {
+    margin: 10px auto;
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* ===== Lista de Itens ===== */
+.list {
+    display: flex;
+    gap: 0.3rem;
+    transform-style: preserve-3d;
+    list-style-type: none;
+    margin: 0;
+}
+
+.list:hover :not(:hover) {
+    margin: 0 -30px;
+    transform: perspective(500px) rotateY(45deg) scale(0.95);
+}
+
+.item {
+    position: relative;
+    width: 200px;
+    aspect-ratio: 3/4;
+    border-radius: 0.5rem;
+    background-size: cover;
+    background-position: center;
+    transition: margin 0.5s, transform 0.5s;
+}
+
+.item:hover {
+    transform: perspective(500px) rotateY(0) scale(1.2);
+}
+
